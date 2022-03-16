@@ -34,9 +34,15 @@ class SoftwareView extends Component {
                 $('#is_Giturl').val(data.swt_github_url)
                 $('#is_Comments').val(data.swt_comments)
                 $('#is_Swt_function').val(data.swt_function)
-                var manualName = data.swt_manual_path.replace('/swmanual/','')
-                var fileName = data.swt_big_imgpath.replace('/image/','')
-                var fileName2 = data.swt_imagepath.replace('/image/','')
+                //var manualName = data.swt_manual_path.replace('/swmanual/','')
+                //var fileName = data.swt_big_imgpath.replace('/image/','')
+                //var fileName2 = data.swt_imagepath.replace('/image/','')
+
+                var manualName, fileName, fileName2;
+                if (data.swt_manual_path != null) manualName = data.swt_manual_path.replace('/swmanual/','')
+                if (data.swt_big_imgpath != null) fileName = data.swt_big_imgpath.replace('/image/','')
+                if (data.swt_imagepath != null) fileName2 = data.swt_imagepath.replace('/image/','');
+
                 $('#upload_img').prepend('<img id="uploadimg" src="'+data.swt_big_imgpath+'"/>')
                 $('#upload_img2').prepend('<img id="uploadimg2" src="'+data.swt_imagepath+'"/>')
 
