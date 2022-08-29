@@ -1,3 +1,4 @@
+ 
 import React, { Component } from 'react';
 
 class R074_ReactCurrying extends Component {
@@ -21,10 +22,9 @@ class R074_ReactCurrying extends Component {
   render() {
     return (
       <>
-        <input type="button" value="NumberPlus1" onClick={e => alert(this.PlusFunc1(100)(200))}/>
-        <input type="button" value="NumberPlus2" onClick={e => alert(this.PlusFunc2(100)(200))}/>
-        <input type="button" value="NumberPlus3" 
-        onClick={e => alert(this.PlusFunc(100))}/>
+        <input type="button" value="NumberPlus" onClick={e => alert(this.PlusFunc(100))}/>
+        <input type="button" value="StringPlus" 
+        onClick={e => alert(this.PlusFunc("react"))}/>
       </>  
     )
   }
